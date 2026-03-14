@@ -44,7 +44,7 @@ export default function () {
             // 1. Status check
             'add-trip: status is 200': (r) => r.status === 200,
             // 2. Response time check
-            'add-trip: response time < 700ms': (r) => r.timings.duration < 500,
+            'add-trip: response time < 500ms': (r) => r.timings.duration < 500,
             // 3. Body is not empty
             'add-trip: body is not empty': (r) => r.body.length > 0,
             // 4. Content-Type header is present
@@ -76,7 +76,7 @@ export default function () {
             // 1. Status check
             'plan: status is 200': (r) => r.status === 200,
             // 2. Response time check
-            'plan: response time < 600ms': (r) => r.timings.duration < 500,
+            'plan: response time < 500ms': (r) => r.timings.duration < 500,
             // 3. Body is not empty
             'plan: body is not empty': (r) => r.body.length > 0,
             // 4. Content-Type header is present
@@ -92,7 +92,7 @@ export default function () {
             // 1. Status check
             'profile: status is 200': (r) => r.status === 200,
             // 2. Response time check
-            'profile: response time < 450ms': (r) => r.timings.duration < 500,
+            'profile: response time < 500ms': (r) => r.timings.duration < 500,
             // 3. Body is not empty
             'profile: body is not empty': (r) => r.body.length > 0,
             // 4. Content-Type header is present
