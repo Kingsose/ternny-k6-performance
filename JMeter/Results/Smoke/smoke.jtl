@@ -1,0 +1,33 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1773854096774,1452,/auth,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 1,452 milliseconds, but should not have lasted longer than 500 milliseconds.",5549,116,2,2,https://ternny.com/auth,1444,0,930
+1773854096774,2398,/auth,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 2,398 milliseconds, but should not have lasted longer than 500 milliseconds.",5444,116,2,2,https://ternny.com/auth,2397,0,1942
+1773854099231,381,/add-trip,200,OK,Smoke test 1-1,text,true,,5563,120,2,2,https://ternny.com/add-trip,378,0,0
+1773854100174,432,/add-trip,200,OK,Smoke test 1-2,text,true,,5554,120,2,2,https://ternny.com/add-trip,430,0,0
+1773854100614,367,/travel-persona,200,OK,Smoke test 1-1,text,true,,5558,126,2,2,https://ternny.com/travel-persona,359,0,0
+1773854101610,2099,/travel-persona,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 2,099 milliseconds, but should not have lasted longer than 500 milliseconds.",5558,126,2,2,https://ternny.com/travel-persona,525,0,0
+1773854101982,1734,/plan,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 1,734 milliseconds, but should not have lasted longer than 500 milliseconds.",5575,116,2,2,https://ternny.com/plan,408,0,0
+1773854104718,371,/profile,200,OK,Smoke test 1-1,text,true,,5559,119,2,2,https://ternny.com/profile,369,0,0
+1773854104710,413,/plan,200,OK,Smoke test 1-2,text,true,,5525,116,2,2,https://ternny.com/plan,409,0,0
+1773854106090,434,/auth,200,OK,Smoke test 1-1,text,true,,5558,116,2,2,https://ternny.com/auth,429,0,0
+1773854106125,450,/profile,200,OK,Smoke test 1-2,text,true,,5499,119,2,2,https://ternny.com/profile,449,0,0
+1773854107524,385,/add-trip,200,OK,Smoke test 1-1,text,true,,5546,120,2,2,https://ternny.com/add-trip,380,0,0
+1773854107576,702,/auth,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 702 milliseconds, but should not have lasted longer than 500 milliseconds.",5553,116,2,2,https://ternny.com/auth,432,0,0
+1773854108910,379,/travel-persona,200,OK,Smoke test 1-1,text,true,,5559,126,2,2,https://ternny.com/travel-persona,377,0,0
+1773854110290,379,/plan,200,OK,Smoke test 1-1,text,true,,5541,116,2,2,https://ternny.com/plan,370,0,0
+1773854109280,1660,/add-trip,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 1,660 milliseconds, but should not have lasted longer than 500 milliseconds.",5444,120,2,2,https://ternny.com/add-trip,769,0,0
+1773854111670,1020,/profile,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 1,020 milliseconds, but should not have lasted longer than 500 milliseconds.",5509,119,2,2,https://ternny.com/profile,385,0,0
+1773854111943,791,/travel-persona,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 791 milliseconds, but should not have lasted longer than 500 milliseconds.",5560,126,2,2,https://ternny.com/travel-persona,450,0,0
+1773854113736,724,/plan,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 724 milliseconds, but should not have lasted longer than 500 milliseconds.",5552,116,2,2,https://ternny.com/plan,723,0,0
+1773854113693,984,/auth,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 984 milliseconds, but should not have lasted longer than 500 milliseconds.",5565,116,2,2,https://ternny.com/auth,369,0,0
+1773854115461,450,/profile,200,OK,Smoke test 1-2,text,true,,5564,119,2,2,https://ternny.com/profile,448,0,0
+1773854115679,843,/add-trip,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 843 milliseconds, but should not have lasted longer than 500 milliseconds.",5530,120,2,2,https://ternny.com/add-trip,381,0,0
+1773854117524,727,/travel-persona,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 727 milliseconds, but should not have lasted longer than 500 milliseconds.",5571,126,2,2,https://ternny.com/travel-persona,382,0,0
+1773854116912,1523,/auth,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 1,523 milliseconds, but should not have lasted longer than 500 milliseconds.",5576,116,2,2,https://ternny.com/auth,709,0,0
+1773854119253,571,/plan,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 571 milliseconds, but should not have lasted longer than 500 milliseconds.",5559,116,2,2,https://ternny.com/plan,352,0,0
+1773854119436,496,/add-trip,200,OK,Smoke test 1-2,text,true,,5419,120,2,2,https://ternny.com/add-trip,493,0,0
+1773854120934,991,/travel-persona,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 991 milliseconds, but should not have lasted longer than 500 milliseconds.",5473,126,2,2,https://ternny.com/travel-persona,714,0,0
+1773854120826,1147,/profile,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 1,147 milliseconds, but should not have lasted longer than 500 milliseconds.",5536,119,2,2,https://ternny.com/profile,1146,0,0
+1773854122926,733,/plan,200,OK,Smoke test 1-2,text,false,"The operation lasted too long: It took 733 milliseconds, but should not have lasted longer than 500 milliseconds.",5547,116,2,2,https://ternny.com/plan,435,0,0
+1773854122974,1166,/auth,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 1,166 milliseconds, but should not have lasted longer than 500 milliseconds.",5540,116,2,2,https://ternny.com/auth,1166,0,0
+1773854124661,434,/profile,200,OK,Smoke test 1-2,text,true,,5548,119,2,2,https://ternny.com/profile,431,0,0
+1773854125142,755,/add-trip,200,OK,Smoke test 1-1,text,false,"The operation lasted too long: It took 755 milliseconds, but should not have lasted longer than 500 milliseconds.",5559,120,1,1,https://ternny.com/add-trip,436,0,0
