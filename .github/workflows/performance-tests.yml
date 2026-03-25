@@ -1,0 +1,95 @@
+name: Ternny Performance Tests
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  k6-smoke-test:
+    name: k6 Smoke Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run k6 Smoke Test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: Scripts/SmokeTesting.js
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+
+      - name: Upload k6 Smoke Report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: k6-smoke-report
+          path: Reports/smoke.html
+
+  k6-load-test:
+    name: k6 Load Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run k6 Load Test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: Scripts/LoadTesting.js
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+
+      - name: Upload k6 Load Report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: k6-load-report
+          path: Reports/load.html
+
+  jmeter-smoke-test:
+    name: JMeter Smoke Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Download JMeter
+        run: |
+          wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.6.3.tgz
+          tar -xzf apache-jmeter-5.6.3.tgz
+
+      - name: Install JMeter Plugins
+        run: |
+          wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.3/cmdrunner-2.3.jar -P apache-jmeter-5.6.3/lib/
+          wget https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.10/jmeter-plugins-manager-1.10.jar -P apache-jmeter-5.6.3/lib/ext/
+          java -cp apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager-1.10.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
+          apache-jmeter-5.6.3/bin/PluginsManagerCMD.sh install bzm-concurrency-thread-group,jpgc-casutg
+
+      - name: Create Results Folders
+        run: |
+          mkdir -p JMeter/Results/Smoke
+          mkdir -p JMeter/Reports/Smoke
+
+      - name: Run JMeter Smoke Test
+        run: |
+          apache-jmeter-5.6.3/bin/jmeter.sh -n \
+            -t JMeter/Ternny_Performance_test.jmx \
+            -l JMeter/Results/Smoke/smoke.jtl \
+            -e -o JMeter/Reports/Smoke
+
+      - name: Upload JMeter Smoke Report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: jmeter-smoke-report
+          path: JMeter/Reports/Smoke
